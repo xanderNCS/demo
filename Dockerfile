@@ -3,9 +3,7 @@
 #
 FROM ubuntu:22.04
 LABEL version="1.0.0"
-LABEL description="LHUB DevOps SonarScan"
-LABEL author_name="Fernando Karnagi"
-LABEL author_email="fernando.karnagi@ncs.com.sg"
+LABEL description="DevOps SonarScan"
 
 ARG MAVEN_VERSION=3.6.3
 ARG USER_HOME_DIR="/root"
