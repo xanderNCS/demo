@@ -5,10 +5,10 @@ on:
       - main
 jobs:
   sonarcloud:
-#    runs-on: ubuntu-16.04
+#    runs-on: ubuntu-latest
     runs-on: NCSSG236NRQ3C0
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
