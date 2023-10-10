@@ -55,9 +55,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Analyze with SonarCloud
-        #        run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=$sonar.projectKey -Dsonar.organization=$sonar.organization -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
-#        run: mvn clean package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=xanderNCS_demo -Dsonar.organization=xanderncs -Dsonar.host.url="https\\://sonarcloud.io" -Dsonar.login=$SONAR_TOKEN
-        run: mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.host.url="https://sonarcloud.io" -Dsonar.token=$SONAR_TOKEN -Dsonar.organization=xanderncs
+        #       run: mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=xanderNCS_demo -Dsonar.organization=xanderncs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+        #       Run this command on windows self-hosted runner, else run above command on linux self-hosted runner
+        run: mvn clean package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar "-Dsonar.projectKey=xanderNCS_demo" "-Dsonar.organization=xanderncs" "-Dsonar.host.url=https://sonarcloud.io" "-Dsonar.login=$SONAR_TOKEN"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
