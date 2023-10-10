@@ -4,8 +4,9 @@ on:
     branches:
       - main
 jobs:
-  build:
-    runs-on: ubuntu-16.04
+  sonarcloud:
+#    runs-on: ubuntu-16.04
+    runs-on: NCSSG236NRQ3C0
     steps:
       - uses: actions/checkout@v1
       - name: Set up JDK
