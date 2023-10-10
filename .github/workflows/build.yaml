@@ -7,10 +7,10 @@ on:
   pull_request:
       types: [opened, synchronize, reopened]
 
-name: SonarQube Scan
+name: SonarCloud Scan
 jobs:
-  sonarqube:
-    name: SonarQube Trigger
+  sonarcloud:
+    name: SonarCloud Trigger
     runs-on: ubuntu-latest
     steps:
     - name: Checking out
