@@ -5,7 +5,7 @@ FROM ubuntu:22.04
 LABEL version="1.0.0"
 LABEL description="DevOps SonarScan"
 
-ARG MAVEN_VERSION=3.6.3
+ARG MAVEN_VERSION=3.9.5
 ARG USER_HOME_DIR="/root"
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
