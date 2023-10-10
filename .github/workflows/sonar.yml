@@ -6,7 +6,7 @@ on:
 jobs:
   sonarcloud:
 #    runs-on: ubuntu-latest
-    runs-on: NCSSG236NRQ3C0
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK
